@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using ProjetAnnuaire.ViewModels;
 
 namespace ProjetAnnuaire.Controllers
 {
@@ -18,14 +19,61 @@ namespace ProjetAnnuaire.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
+        public IActionResult Index(string condition = "")
+        {   
+            ViewBag.Employee = Employee.GetEmployees();
+            ViewBag.Site = Site.GetSites();
+            ViewBag.Service = Service.GetServices();
+            if (condition != "")
+            {
+                return View(Employee.GetEmployees(condition));
+            }
+            else
+            {
+                return View(Employee.GetEmployees());
+            }
+        }
+
+        public IActionResult SubmitForm(string search = null, int idSite = 0, int idService = 0)
+        {   
+            string condition = "";
+            if (search != null  )
+            {
+                condition += " lastname like '" + search + "%' ";
+            };
+            if (idSite > 0)
+            {
+                if (condition != "")
+                {
+                    condition += " AND ";
+                };
+                condition += " idSite = " + idSite;
+            };
+            if (idService > 0)
+            {
+                if (condition != "")
+                {
+                    condition += " AND ";
+                };
+                condition += " idService = " + idService;
+            };
+
+            return RedirectToAction("Index" ,new { @condition = condition });
         }
 
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult ShowEmployee(int id)
+        {
+            return View(Employee.GetEmployee(id));
+        }
+
+        public IActionResult Employees()
+        {
+            return View(Employee.GetEmployees());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

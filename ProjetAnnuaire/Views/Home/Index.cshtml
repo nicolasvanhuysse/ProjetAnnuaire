@@ -2,7 +2,104 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@{
+}
+@model List<Employee>
+<h1>Liste des Salariés</h1>
+
+<br />
+
+<div class="container">
+    <form asp-controller="Home" asp-action="SubmitForm" method="post">
+        <div class="row">
+
+            <div class="col-3">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" name="search" class="form-control"  placeholder="Rechercher par nom"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="idSite" aria-label="Site">
+                    <option selected>Tous les sites</option>
+                    @foreach (Site s in ViewBag.Site)
+                    {
+                        <option value="@s.IdSite">@s.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="idService" aria-label="Service">
+                    <option selected>Tous les services</option>
+                    @foreach (Service s in ViewBag.Service)
+                    {
+                        <option value="@s.IdService">@s.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary">Rechercher</button>
+            </div>
+
+        </div>
+    </form>
 </div>
+
+<br />
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Service</th>
+                <th scope="col">Site</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Employee e in Model)
+            {
+                <tr>
+                    <td>@e.Lastname</td>
+                    <td>@e.Firstname</td>
+                    <td>@e.Service.Name</td>
+                    <td>@e.Site.Name</td>
+                    <td><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ShowEmployee" asp-route-id="@e.Id">Voir le salarié</a></td>
+                </tr>
+                @*                <div class="row">
+                        <div class="col">
+                            @e.Lastname
+                        </div>
+                        <div class="col">
+                            @e.Firstname
+                        </div>
+                        <div class="col">
+                            @e.Phone
+                        </div>
+                        <div class="col">
+                            @e.Cellphone
+                        </div>
+                        <div class="col">
+                            @e.Mail
+                        </div>
+                        <div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ShowEmployee" asp-route-id="@e.Id">Voir le salarié</a>
+                        </div>
+                        <div>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DeleteContact" asp-route-id="@e.Id">Supprimer</a>
+                        </div>
+                    </div>*@
+            }
+        </tbody>
+
+    </table>
+
+</div>
+
+
+
+@*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AjouterContact">Ajouter un contact</a>*@
