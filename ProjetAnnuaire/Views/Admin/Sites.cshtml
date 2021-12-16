@@ -11,6 +11,15 @@
 
 <br />
 
+@if (ViewBag.Message != null)
+{
+    <div class="row m-1 justify-content-center">
+        <div class="alert alert-danger col-6 p-1">
+            @ViewBag.Message
+        </div>
+    </div>
+}
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-6">
@@ -30,7 +39,7 @@
             @foreach (Site s in Model)
             {
                 <tr>
-                    <td>@s.Name</td>                    
+                    <td>@s.Name</td>
                     <td>@s.SiteType.Name</td>
                     <td><span><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AddSite" asp-route-id="@s.IdSite"><i class="fas fa-edit"></i></a><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="DeleteSite" asp-route-id="@s.IdSite"><i class="fas fa-minus-circle"></i></a></span></td>
                 </tr>

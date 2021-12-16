@@ -21,8 +21,9 @@ namespace ProjetAnnuaire.Controllers
         //---------------------------------------------------------------------------------------------------------
 
         // Vue gestion des Sites en liste
-        public IActionResult Sites()
+        public IActionResult Sites(string message)
         {
+            ViewBag.Message = message;
             return View(Site.GetSites());
         }
 
@@ -58,10 +59,20 @@ namespace ProjetAnnuaire.Controllers
         {
             Site site = Site.GetSite(id);
             if (site != null)
+            {   
+                bool delete = site.Delete();
+                if (delete) 
+                {
+                    return RedirectToAction("Sites","Admin");
+                }
+                else
+                {
+                    return RedirectToAction("Sites", "Admin", new { message = "Suppression impossible. Un salarié est encore lié au site." });
+                }
+            }else
             {
-                site.Delete();
+                return RedirectToAction("Sites", "Admin");
             }
-            return RedirectToAction("Sites");
         }
 
         //---------------------------------------------------------------------------------------------------------
@@ -69,8 +80,9 @@ namespace ProjetAnnuaire.Controllers
         //---------------------------------------------------------------------------------------------------------
 
         // Vue gestion des Services en liste
-        public IActionResult Services()
+        public IActionResult Services(string message)
         {
+            ViewBag.Message = message;
             return View(Service.GetServices());
         }
 
@@ -104,9 +116,20 @@ namespace ProjetAnnuaire.Controllers
             Service service = Service.GetService(id);
             if (service != null)
             {
-                service.Delete();
+                bool delete = service.Delete();
+                if (delete)
+                {
+                    return RedirectToAction("Services", "Admin");
+                }
+                else
+                {
+                    return RedirectToAction("Services", "Admin", new { message = "Suppression impossible. Un salarié est encore lié au service." });
+                }
             }
-            return RedirectToAction("Services");
+            else
+            {
+                return RedirectToAction("Services", "Admin");
+            }
         }
 
         //---------------------------------------------------------------------------------------------------------

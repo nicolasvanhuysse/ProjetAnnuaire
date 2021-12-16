@@ -87,7 +87,7 @@ namespace ProjetAnnuaire.Models
             }
             else
             {
-                return result == 1;
+                return result == 0;
             }
         }
 

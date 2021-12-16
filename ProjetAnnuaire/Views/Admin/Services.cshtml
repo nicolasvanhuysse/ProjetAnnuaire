@@ -11,6 +11,15 @@
 
 <br />
 
+@if (ViewBag.Message != null)
+{
+    <div class="row m-1 justify-content-center">
+        <div class="alert alert-danger col-6 p-1">
+            @ViewBag.Message
+        </div>
+    </div>
+}
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-6">
