@@ -57,3 +57,5 @@ C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuai
 C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\ProjetAnnuaire.csproj.AssemblyReference.cache
 C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Home\Employees.cshtml.g.cs
 C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Home\showEmployee.cshtml.g.cs
+C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Home\Admin.cshtml.g.cs
+C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Home\AddEmployee.cshtml.g.cs

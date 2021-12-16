@@ -10,7 +10,7 @@
 <br />
 
 <div class="container">
-    <form asp-controller="Home" asp-action="SubmitForm" method="post">
+    <form asp-controller="Home" asp-action="SubmitForm" method="get">
         <div class="row">
 
             <div class="col-3">
@@ -70,29 +70,6 @@
                     <td>@e.Site.Name</td>
                     <td><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ShowEmployee" asp-route-id="@e.Id">Voir le salarié</a></td>
                 </tr>
-                @*                <div class="row">
-                        <div class="col">
-                            @e.Lastname
-                        </div>
-                        <div class="col">
-                            @e.Firstname
-                        </div>
-                        <div class="col">
-                            @e.Phone
-                        </div>
-                        <div class="col">
-                            @e.Cellphone
-                        </div>
-                        <div class="col">
-                            @e.Mail
-                        </div>
-                        <div>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ShowEmployee" asp-route-id="@e.Id">Voir le salarié</a>
-                        </div>
-                        <div>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DeleteContact" asp-route-id="@e.Id">Supprimer</a>
-                        </div>
-                    </div>*@
             }
         </tbody>
 
