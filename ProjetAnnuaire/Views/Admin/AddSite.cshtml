@@ -1,0 +1,73 @@
+﻿@if (ViewBag.Site != null)
+{
+    <h1>Modification</h1>
+
+    <br />
+
+    <form asp-controller="Admin" asp-action="SubmitEditFormSite" method="post">
+        <div>
+            <input class="form-control" type="text" name="idSite" hidden placeholder="id" value="@ViewBag.Site.IdSite" />
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input class="form-control" type="text" name="name" placeholder="Nom" value="@ViewBag.Site.Name" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-6">
+                <select class="form-control" name="id_SiteType" aria-label="Site">
+                    @foreach (SiteType s in ViewBag.SiteType)
+                    {
+                        if (ViewBag.Site.SiteType.Id_SiteType == s.Id_SiteType)
+                        {
+                            <option selected value="@s.Id_SiteType">@s.Name</option>
+
+                        }
+                        else
+                        {
+                            <option value="@s.Id_SiteType">@s.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+            </div>
+        </div>
+    </form>
+}
+else
+{
+    <h1>Ajout</h1>
+
+    <form asp-controller="Admin" asp-action="SubmitAddFormSite" method="post">
+        <div class="row">
+            <div class="col-6">
+                <input class="form-control" type="text" name="name" placeholder="Nom" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-6">
+                <select class="form-control" name="id_SiteType" aria-label="Site">
+                    <option selected>Tous les types de site</option>
+                    @foreach (SiteType s in ViewBag.SiteType)
+                    {
+                <option value="@s.Id_SiteType">@s.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+            </div>
+        </div>
+    </form>
+}
+

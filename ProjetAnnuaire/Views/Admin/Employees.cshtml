@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Salarié";
+}
+
+@{
+}
+@model List<Employee>
+
+<h1>Gestion des Salariés</h1>
+
+<br />
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <input type="button" class="btn btn-primary btn-block" value="Ajouter un salarié" onclick="location.href='@Url.Action("AddEmployee", "Admin","0")'" />
+
+        </div>
+    </div>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Service</th>
+                <th scope="col">Site</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Employee e in Model)
+            {
+                <tr>
+                    <td>@e.Lastname</td>
+                    <td>@e.Firstname</td>
+                    <td>@e.Service.Name</td>
+                    <td>@e.Site.Name</td>
+                    <td><span><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AddEmployee" asp-route-id="@e.Id"><i class="fas fa-edit"></i></a><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="DeleteEmployee" asp-route-id="@e.Id"><i class="fas fa-minus-circle"></i></a></span></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+@*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddEmployee" asp-route-id="0">Ajouter un contact</a>*@
+
+@*<input type="button" class="btn btn-primary" value="Ajouter un salarié" onclick="location.href='@Url.Action("AddEmployee", "Home","0")'" />*@

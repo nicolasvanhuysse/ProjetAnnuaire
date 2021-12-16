@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Sites";
+}
+
+@{
+}
+@model List<Site>
+
+<h1>Gestion des Sites</h1>
+
+<br />
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <input type="button" class="btn btn-primary btn-block" value="Ajouter un site" onclick="location.href='@Url.Action("AddSite", "Admin","0")'" />
+        </div>
+    </div>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom du site</th>
+                <th scope="col">Type</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Site s in Model)
+            {
+                <tr>
+                    <td>@s.Name</td>                    
+                    <td>@s.SiteType.Name</td>
+                    <td><span><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AddSite" asp-route-id="@s.IdSite"><i class="fas fa-edit"></i></a><a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="DeleteSite" asp-route-id="@s.IdSite"><i class="fas fa-minus-circle"></i></a></span></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

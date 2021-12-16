@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Salarié";
+}
+@model Employee
+<h1> Information sur le salarié : </h1>
+
+<div class="col">
+    <p>Nom : @Model.Firstname </p>
+</div>
+<div class="col">
+    <p>Prénom : @Model.Lastname </p>
+</div>
+<div class="col">
+    <p>Téléphone fixe : @Model.Phone </p>
+</div>
+<div class="col">
+    <p>Téléphone portable : @Model.Cellphone </p>
+</div>
+<div class="col"> 
+    <p>Addresse mail : @Model.Mail </p>
+</div>
+<div class="col"> 
+    <p>Service : @Model.Service.Name </p>
+</div>
+<div class="col"> 
+    <p>Site : @Model.Site.Name </p>
+</div>
