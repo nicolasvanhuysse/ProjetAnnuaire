@@ -26,8 +26,15 @@ using ProjetAnnuaire.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\_ViewImports.cshtml"
+using ProjetAnnuaire.Services;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5efaf5d58fb5c13b64e3c89323ad7e66380ae047", @"/Views/Admin/AddService.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0a81e7c2d2afa9d6f24defcd80597f6ceb229e91", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b15ebe5ec6ecca2a4149517765a8bf280b64f9b3", @"/Views/_ViewImports.cshtml")]
     public class Views_Admin_AddService : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Admin", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -70,7 +77,7 @@ using ProjetAnnuaire.Models;
             WriteLiteral("    <h1>Modification</h1>\r\n");
             WriteLiteral("    <br />\r\n");
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5efaf5d58fb5c13b64e3c89323ad7e66380ae0474898", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5efaf5d58fb5c13b64e3c89323ad7e66380ae0475119", async() => {
                 WriteLiteral("\r\n        <div>\r\n            <input class=\"form-control\" type=\"text\" name=\"idService\" hidden placeholder=\"id\"");
                 BeginWriteAttribute("value", " value=\"", 268, "\"", 302, 1);
 #nullable restore
@@ -132,7 +139,7 @@ else
 #nullable disable
             WriteLiteral("    <h1>Ajout</h1>\r\n");
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5efaf5d58fb5c13b64e3c89323ad7e66380ae0478448", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5efaf5d58fb5c13b64e3c89323ad7e66380ae0478669", async() => {
                 WriteLiteral(@"
         <div class=""row"">
             <div class=""col-12"">

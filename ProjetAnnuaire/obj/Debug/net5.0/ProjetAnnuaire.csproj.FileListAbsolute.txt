@@ -63,3 +63,4 @@ C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuai
 C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Admin\Services.cshtml.g.cs
 C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Admin\AddSite.cshtml.g.cs
 C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Admin\Sites.cshtml.g.cs
+C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs

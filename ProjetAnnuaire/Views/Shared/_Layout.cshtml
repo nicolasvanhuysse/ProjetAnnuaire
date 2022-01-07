@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+@inject ILogin _login
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,6 +25,14 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="Connexion">
+                                <i class="fas fa-sign-in-alt"></i><span class="d-lg-none ml-3">Se connecter</span>
+                            </a>
+                        </li>
+                        <li>
+                            @_login.GetLogin()
                         </li>
                     </ul>
                 </div>

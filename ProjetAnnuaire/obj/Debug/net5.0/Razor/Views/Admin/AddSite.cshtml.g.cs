@@ -26,8 +26,15 @@ using ProjetAnnuaire.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\_ViewImports.cshtml"
+using ProjetAnnuaire.Services;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"26e5351b1f822f619f9148232d27fc5ec1cd82cc", @"/Views/Admin/AddSite.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0a81e7c2d2afa9d6f24defcd80597f6ceb229e91", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b15ebe5ec6ecca2a4149517765a8bf280b64f9b3", @"/Views/_ViewImports.cshtml")]
     public class Views_Admin_AddSite : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Admin", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -71,7 +78,7 @@ using ProjetAnnuaire.Models;
             WriteLiteral("    <h1>Modification</h1>\r\n");
             WriteLiteral("    <br />\r\n");
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc5003", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc5224", async() => {
                 WriteLiteral("\r\n        <div>\r\n            <input class=\"form-control\" type=\"text\" name=\"idSite\" hidden placeholder=\"id\"");
                 BeginWriteAttribute("value", " value=\"", 259, "\"", 287, 1);
 #nullable restore
@@ -104,7 +111,7 @@ WriteAttributeValue("", 462, ViewBag.Site.Name, 462, 18, false);
 #line hidden
 #nullable disable
                 WriteLiteral("                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc7053", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc7274", async() => {
 #nullable restore
 #line 24 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddSite.cshtml"
                                                                Write(s.Name);
@@ -149,7 +156,7 @@ WriteAttributeValue("", 462, ViewBag.Site.Name, 462, 18, false);
 #line hidden
 #nullable disable
                 WriteLiteral("                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc9674", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc9895", async() => {
 #nullable restore
 #line 29 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddSite.cshtml"
                                                       Write(s.Name);
@@ -229,7 +236,7 @@ else
 #nullable disable
             WriteLiteral("    <h1>Ajout</h1>\r\n");
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc14063", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc14284", async() => {
                 WriteLiteral(@"
         <div class=""row"">
             <div class=""col-6"">
@@ -241,7 +248,7 @@ else
             <div class=""col-6"">
                 <select class=""form-control"" name=""id_SiteType"" aria-label=""Site"">
                     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc14709", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc14930", async() => {
                     WriteLiteral("Tous les types de site");
                 }
                 );
@@ -267,7 +274,7 @@ else
 #line hidden
 #nullable disable
                 WriteLiteral("                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc16391", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e5351b1f822f619f9148232d27fc5ec1cd82cc16612", async() => {
 #nullable restore
 #line 60 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddSite.cshtml"
                                           Write(s.Name);

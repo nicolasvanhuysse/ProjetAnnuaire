@@ -26,8 +26,15 @@ using ProjetAnnuaire.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\_ViewImports.cshtml"
+using ProjetAnnuaire.Services;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"deb6169cda67b962ab84c740461b1fd46b7b2e80", @"/Views/Admin/AddEmployee.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0a81e7c2d2afa9d6f24defcd80597f6ceb229e91", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b15ebe5ec6ecca2a4149517765a8bf280b64f9b3", @"/Views/_ViewImports.cshtml")]
     public class Views_Admin_AddEmployee : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Admin", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -71,7 +78,7 @@ using ProjetAnnuaire.Models;
             WriteLiteral("    <h1>Modification</h1>\r\n");
             WriteLiteral("    <br />\r\n");
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e805039", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e805260", async() => {
                 WriteLiteral("\r\n        <div>\r\n            <input class=\"form-control\" type=\"text\" name=\"id\" hidden placeholder=\"id\"");
                 BeginWriteAttribute("value", " value=\"", 263, "\"", 291, 1);
 #nullable restore
@@ -144,7 +151,7 @@ WriteAttributeValue("", 1350, ViewBag.Employee.Mail, 1350, 22, false);
 #line hidden
 #nullable disable
                 WriteLiteral("                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e809594", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e809815", async() => {
 #nullable restore
 #line 42 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddEmployee.cshtml"
                                                           Write(s.Name);
@@ -189,7 +196,7 @@ WriteAttributeValue("", 1350, ViewBag.Employee.Mail, 1350, 22, false);
 #line hidden
 #nullable disable
                 WriteLiteral("                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8012217", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8012438", async() => {
 #nullable restore
 #line 47 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddEmployee.cshtml"
                                                  Write(s.Name);
@@ -240,7 +247,7 @@ WriteAttributeValue("", 1350, ViewBag.Employee.Mail, 1350, 22, false);
 #line hidden
 #nullable disable
                 WriteLiteral("                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8015066", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8015287", async() => {
 #nullable restore
 #line 58 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddEmployee.cshtml"
                                                              Write(s.Name);
@@ -285,7 +292,7 @@ WriteAttributeValue("", 1350, ViewBag.Employee.Mail, 1350, 22, false);
 #line hidden
 #nullable disable
                 WriteLiteral("                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8017696", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8017917", async() => {
 #nullable restore
 #line 63 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddEmployee.cshtml"
                                                     Write(s.Name);
@@ -365,7 +372,7 @@ else
 #nullable disable
             WriteLiteral("    <h1>Ajout</h1>\r\n");
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8022098", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8022319", async() => {
                 WriteLiteral(@"
         <div class=""row"">
             <div class=""col-6"">
@@ -395,7 +402,7 @@ else
             <div class=""col-6"">
                ");
                 WriteLiteral(" <select class=\"form-control\" name=\"idSite\" aria-label=\"Site\">\r\n                    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8023565", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8023786", async() => {
                     WriteLiteral("Tous les sites");
                 }
                 );
@@ -421,7 +428,7 @@ else
 #line hidden
 #nullable disable
                 WriteLiteral("                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8025244", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8025465", async() => {
 #nullable restore
 #line 112 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddEmployee.cshtml"
                                              Write(s.Name);
@@ -460,7 +467,7 @@ else
 #line hidden
 #nullable disable
                 WriteLiteral("                </select>\r\n            </div>\r\n            <div class=\"col-6\">\r\n                <select class=\"form-control\" name=\"idService\" aria-label=\"Service\">\r\n                    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8027632", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8027853", async() => {
                     WriteLiteral("Tous les services");
                 }
                 );
@@ -486,7 +493,7 @@ else
 #line hidden
 #nullable disable
                 WriteLiteral("                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8029320", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "deb6169cda67b962ab84c740461b1fd46b7b2e8029541", async() => {
 #nullable restore
 #line 121 "C:\Users\yuuma\Desktop\Projet Individuel Cube 4 .net\ProjetAnnuaire\ProjetAnnuaire\Views\Admin\AddEmployee.cshtml"
                                                 Write(s.Name);

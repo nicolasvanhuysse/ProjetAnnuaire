@@ -10,6 +10,14 @@ namespace ProjetAnnuaire.Controllers
 {
     public class AdminController : Controller
     {
+
+        // Page Acces Admin
+
+        public IActionResult connexion()
+        {
+            return View("/Views/Login/Index.cshtml");
+        }
+
         // Page Admin
         public IActionResult Admin()
         {
