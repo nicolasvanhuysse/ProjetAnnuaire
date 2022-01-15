@@ -31,8 +31,14 @@ namespace ProjetAnnuaire.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Admin", new { message = "Erreur de connexion" });
+                return RedirectToAction("Index", "Login", new { message = "Erreur de connexion" });
             }
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

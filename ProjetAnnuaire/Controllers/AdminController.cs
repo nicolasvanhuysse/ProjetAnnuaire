@@ -5,12 +5,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ProjetAnnuaire.Services;
 
 namespace ProjetAnnuaire.Controllers
 {
     public class AdminController : Controller
     {
-
+        private ILogin _login;
+        public AdminController(ILogin login)
+        {
+            _login = login;
+        }
         // Page Acces Admin
 
         public IActionResult connexion()
@@ -21,7 +26,19 @@ namespace ProjetAnnuaire.Controllers
         // Page Admin
         public IActionResult Admin()
         {
-            return View();
+            if (_login.isLogged())
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Login");
+            }
+        }
+
+        private IActionResult RedirectToHome()
+        {
+            return RedirectToAction("Index", "Home");
         }
 
         //---------------------------------------------------------------------------------------------------------
@@ -32,7 +49,16 @@ namespace ProjetAnnuaire.Controllers
         public IActionResult Sites(string message)
         {
             ViewBag.Message = message;
-            return View(Site.GetSites());
+
+            if (_login.isLogged())
+            {
+                return View(Site.GetSites());
+            }
+            else
+            {
+                return RedirectToHome();
+            }
+
         }
 
         // Vue pour ajouter et modifier un site
@@ -91,7 +117,15 @@ namespace ProjetAnnuaire.Controllers
         public IActionResult Services(string message)
         {
             ViewBag.Message = message;
-            return View(Service.GetServices());
+
+            if (_login.isLogged())
+            {
+                return View(Service.GetServices());
+            }
+            else
+            {
+                return RedirectToHome();
+            }
         }
 
         // Vue pour ajouter et modifier un service
@@ -147,7 +181,14 @@ namespace ProjetAnnuaire.Controllers
         // Vue gestion des Salariés en liste
         public IActionResult Employees()
         {
-            return View(Employee.GetEmployees());
+            if (_login.isLogged())
+            {
+                return View(Employee.GetEmployees());
+            }
+            else
+            {
+                return RedirectToHome();
+            }
         }
 
         // Vue pour ajouter et modifier un salarié

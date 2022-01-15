@@ -23,17 +23,31 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+@*                        <li class="nav-item">
+            <a class="nav-link" asp-controller="Admin" asp-action="Connexion">
+                <i class="fas fa-sign-in-alt"></i><span class="d-lg-none ml-3">Se connecter</span>
+            </a>
+        </li>*@
+                        @if (@_login.isLogged())
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin">Admin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logout">
+                                    <i class="fas fa-sign-out-alt"></i><span class="d-lg-none ml-3">Se déconnecter</span>
+                                </a>
+                            </li>
+                        }
+@*                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin">Admin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Admin" asp-action="Connexion">
-                                <i class="fas fa-sign-in-alt"></i><span class="d-lg-none ml-3">Se connecter</span>
+                            <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Logout">
+                                <i class="fas fa-sign-out-alt"></i><span class="d-lg-none ml-3">Se déconnecter</span>
                             </a>
-                        </li>
-                        <li>
-                            @_login.GetLogin()
-                        </li>
+                        <li>*@
+
                     </ul>
                 </div>
             </div>
