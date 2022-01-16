@@ -15,18 +15,9 @@
             <div class="col-3">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input type="search" name="search" class="form-control"  placeholder="Rechercher par nom"/>
+                        <input type="search" name="search" class="form-control" placeholder="Rechercher par nom" />
                     </div>
                 </div>
-            </div>
-            <div class="col-3">
-                <select class="form-control" name="idSite" aria-label="Site">
-                    <option selected>Tous les sites</option>
-                    @foreach (Site s in ViewBag.Site)
-                    {
-                        <option value="@s.IdSite">@s.Name</option>
-                    }
-                </select>
             </div>
             <div class="col-3">
                 <select class="form-control" name="idService" aria-label="Service">
@@ -34,6 +25,15 @@
                     @foreach (Service s in ViewBag.Service)
                     {
                         <option value="@s.IdService">@s.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="idSite" aria-label="Site">
+                    <option selected>Tous les sites</option>
+                    @foreach (Site s in ViewBag.Site)
+                    {
+                        <option value="@s.IdSite">@s.Name</option>
                     }
                 </select>
             </div>
@@ -67,7 +67,7 @@
                     <td>@e.Firstname</td>
                     <td>@e.Service.Name</td>
                     <td>@e.Site.Name</td>
-                    <td><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ShowEmployee" asp-route-id="@e.Id">Voir le salarié</a></td>
+                    <td><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ShowEmployee" asp-route-id="@e.Id"><i class="fas fa-eye"></i></a></td>
                 </tr>
             }
         </tbody>

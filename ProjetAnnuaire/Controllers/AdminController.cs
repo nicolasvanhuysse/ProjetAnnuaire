@@ -17,13 +17,13 @@ namespace ProjetAnnuaire.Controllers
             _login = login;
         }
         // Page Acces Admin
-
         public IActionResult connexion()
         {
             return View("/Views/Login/Index.cshtml");
         }
 
         // Page Admin
+        [Route("admin")]
         public IActionResult Admin()
         {
             if (_login.isLogged())
@@ -62,8 +62,9 @@ namespace ProjetAnnuaire.Controllers
         }
 
         // Vue pour ajouter et modifier un site
-        public IActionResult AddSite(int id)
+        public IActionResult AddSite(int id,string message)
         {
+            ViewBag.Message = message;
             ViewBag.SiteType = SiteType.GetSiteTypes();
             if (id > 0)
             {
@@ -75,6 +76,11 @@ namespace ProjetAnnuaire.Controllers
         // Formulaire Ajout Site
         public IActionResult SubmitAddFormSite(Site s, SiteType sitetype)
         {
+            if (sitetype.Id_SiteType == 0)
+            {
+                return RedirectToAction("AddSite", new { message = "Site non renseigné" });
+            }
+
             s.SiteType = sitetype;
             s.Save();
             return RedirectToAction("Sites");
@@ -192,8 +198,9 @@ namespace ProjetAnnuaire.Controllers
         }
 
         // Vue pour ajouter et modifier un salarié
-        public IActionResult AddEmployee(int id)
+        public IActionResult AddEmployee(int id,string message)
         {
+            ViewBag.Message = message;
             ViewBag.Site = Site.GetSites();
             ViewBag.Service = Service.GetServices();
             if (id > 0)
@@ -206,10 +213,24 @@ namespace ProjetAnnuaire.Controllers
         // Formulaire Ajout Salarié
         public IActionResult SubmitAddFormEmployee(Employee e, Site site, Service service)
         {
-            e.Site = site;
-            e.Service = service;
-            e.Save();
-            return RedirectToAction("Employees");
+            if (site.IdSite == 0)
+            {
+                return RedirectToAction("AddEmployee", new { message = "Site non renseigné" });
+            }
+
+            if (service.IdService == 0)
+            {
+                return RedirectToAction("AddEmployee", new { message = "Service non renseigné" });
+
+            }
+
+            else
+            {
+                e.Site = site;
+                e.Service = service;
+                e.Save();
+                return RedirectToAction("Employees");
+            }
         }
 
         // Formulaire Modification Salarié

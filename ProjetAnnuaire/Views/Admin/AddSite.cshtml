@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <input class="form-control" type="text" name="name" placeholder="Nom" value="@ViewBag.Site.Name" />
+                <input class="form-control" type="text" name="name" placeholder="Nom" value="@ViewBag.Site.Name" required />
             </div>
         </div>
         <br />
@@ -47,17 +47,25 @@ else
     <form asp-controller="Admin" asp-action="SubmitAddFormSite" method="post">
         <div class="row">
             <div class="col-6">
-                <input class="form-control" type="text" name="name" placeholder="Nom" />
+                <input class="form-control" type="text" name="name" placeholder="Nom" required />
             </div>
         </div>
         <br />
+        @if (ViewBag.Message != null)
+        {
+            <div class="row m-1">
+                <div class="alert alert-danger col-6 p-1">
+                    @ViewBag.Message
+                </div>
+            </div>
+        }
         <div class="row">
             <div class="col-6">
                 <select class="form-control" name="id_SiteType" aria-label="Site">
                     <option selected>Tous les types de site</option>
                     @foreach (SiteType s in ViewBag.SiteType)
                     {
-                <option value="@s.Id_SiteType">@s.Name</option>
+                        <option value="@s.Id_SiteType">@s.Name</option>
                     }
                 </select>
             </div>

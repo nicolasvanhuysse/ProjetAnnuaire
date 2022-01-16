@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <input class="form-control" type="text" name="name" placeholder="Nom" value="@ViewBag.Service.Name" />
+                <input class="form-control" type="text" name="name" placeholder="Nom" value="@ViewBag.Service.Name" required />
             </div>
         </div>
         <br />
@@ -28,7 +28,7 @@ else
     <form asp-controller="Admin" asp-action="SubmitAddFormService" method="post">
         <div class="row">
             <div class="col-12">
-                <input class="form-control" type="text" name="name" placeholder="Nom du service" />
+                <input class="form-control" type="text" name="name" placeholder="Nom du service" required />
             </div>
         </div>
         <br />

@@ -10,25 +10,25 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <input class="form-control" type="text" name="lastName" placeholder="Nom" value="@ViewBag.Employee.Lastname" />
+                <input class="form-control" type="text" name="lastName" placeholder="Nom" value="@ViewBag.Employee.Lastname" required/>
             </div>
             <div class="col-6">
-                <input class="form-control" type="text" name="firstname" placeholder="Prénom" value="@ViewBag.Employee.Firstname" />
+                <input class="form-control" type="text" name="firstname" placeholder="Prénom" value="@ViewBag.Employee.Firstname" required/>
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-6">
-                <input class="form-control" type="text" name="phone" placeholder="Téléphone fixe" value="@ViewBag.Employee.Phone" />
+                <input class="form-control" type="tel" name="phone" placeholder="Téléphone fixe" value="@ViewBag.Employee.Phone" pattern="^\+?\s*(\d+\s?){8,}$" required/>
             </div>
             <div class="col-6">
-                <input class="form-control" type="text" name="cellphone" placeholder="Téléphone portable" value="@ViewBag.Employee.Cellphone" />
+                <input class="form-control" type="tel" name="cellphone" placeholder="Téléphone portable" value="@ViewBag.Employee.Cellphone" pattern="^\+?\s*(\d+\s?){8,}$" required/>
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-12">
-                <input class="form-control" type="text" name="mail" placeholder="Addresse mail" value="@ViewBag.Employee.Mail" />
+                <input class="form-control" type="email" name="mail" placeholder="Addresse mail" value="@ViewBag.Employee.Mail" required/>
             </div>
         </div>
         <br />
@@ -81,28 +81,36 @@ else
     <form asp-controller="Admin" asp-action="SubmitAddFormEmployee" method="post">
         <div class="row">
             <div class="col-6">
-                <input class="form-control" type="text" name="lastName" placeholder="Nom" />
+                <input class="form-control" type="text" name="lastName" placeholder="Nom" required />
             </div>
             <div class="col-6">
-                <input class="form-control" type="text" name="firstname" placeholder="Prénom" />
+                <input class="form-control" type="text" name="firstname" placeholder="Prénom" required />
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-6">
-                <input class="form-control" type="text" name="phone" placeholder="Téléphone fixe" />
+                <input class="form-control" type="tel" name="phone" placeholder="Téléphone fixe" pattern="^\+?\s*(\d+\s?){8,}$" required />
             </div>
             <div class="col-6">
-                <input class="form-control" type="text" name="cellphone" placeholder="Téléphone portable" />
+                <input class="form-control" type="tel" name="cellphone" placeholder="Téléphone portable" pattern="^\+?\s*(\d+\s?){8,}$" required />
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-12">
-                <input class="form-control" type="text" name="mail" placeholder="Addresse mail" />
+                <input class="form-control" type="email" name="mail" placeholder="Addresse mail" required />
             </div>
         </div>
         <br />
+        @if (ViewBag.Message != null)
+        {
+            <div class="row m-1 justify-content-center">
+                <div class="alert alert-danger col-6 p-1">
+                    @ViewBag.Message
+                </div>
+            </div>
+        }
         <div class="row">
             <div class="col-6">
                 <select class="form-control" name="idSite" aria-label="Site">
